@@ -9,6 +9,9 @@ ENV HEXO_SERVER_PORT=4000
 ENV GIT_USER="Joe Bloggs"
 ENV GIT_EMAIL="joe@bloggs.com"
 
+# 指定 npm 使用 淘宝镜像
+RUN npm config set registry https://registry.npm.taobao.org
+
 # Install requirements
 RUN \
  apt-get update && \
